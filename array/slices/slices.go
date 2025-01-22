@@ -19,6 +19,15 @@ func main() {
 
 	sliceMake = make([]int, 10, 20)
 	fmt.Println(sliceMake, len(sliceMake), cap(sliceMake))
+	//slice append
 	sliceMake = append(sliceMake, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0)
 	fmt.Println(sliceMake, len(sliceMake), cap(sliceMake))
+
+	//Slice usando o mesmo Array
+	sliceUsingSameArr := make([]int, 10, 20)
+	fmt.Println("Array Criado pelo Make", sliceUsingSameArr)                   // provo  a criação do array
+	sliceUsingSameArr2 := append(sliceUsingSameArr, 1, 2, 3, 4, 5, 6, 7, 8, 9) //adicionando os slices dentro do meu array
+	fmt.Println("Array com o Slice", sliceUsingSameArr, sliceUsingSameArr2)
+	sliceUsingSameArr[0] = 7
+	fmt.Println("Array com o Slice1 e 2 provando q usam o mesmo array", sliceUsingSameArr, sliceUsingSameArr2)
 }
